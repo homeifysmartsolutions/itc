@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-scanner-beam: scanner-beam 2s ease-in-out infinite;
+  --animate-slide-in: slide-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-spin-slow: spin 8s linear infinite;
+
+  @keyframes scanner-beam {
+    0%, 100% { top: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  @keyframes slide-in {
+    from { transform: translateX(100%) translateY(10px); opacity: 0; }
+    to { transform: translateX(0) translateY(0); opacity: 1; }
+  }
+}
+
+/* Custom Scrollbar Styles for the dashboard panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+@utility animate-scanner-beam {
+  animation: var(--animate-scanner-beam);
+}
+
+@utility animate-slide-in {
+  animation: var(--animate-slide-in);
+}
+
+@utility animate-spin-slow {
+  animation: var(--animate-spin-slow);
+}
+

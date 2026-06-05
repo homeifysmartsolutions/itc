@@ -1,0 +1,6 @@
+{
+  "name": "Tatkal Train Ticket Booking Dashboard",
+  "description": "An automated dashboard for Indian Railway Tatkal bookings, featuring real-time availability alerts, secure autofill managers, quick payment biometrics, speed run checkout practice, and live refund tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
